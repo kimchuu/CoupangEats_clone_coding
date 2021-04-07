@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/btn_radius"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/cutom_dialog_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="입력하신 아이디 또는 비밀번호가 일치하지 않습니다."
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/custom_dialog_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:textColor="#1E32E4"
+        android:backgroundTint="@color/white"
+        android:layout_below="@+id/cutom_dialog_tv"
+        android:layout_alignParentEnd="true"
+        />
+
+</RelativeLayout>

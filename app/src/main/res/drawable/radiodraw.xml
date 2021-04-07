@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" >
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <stroke android:width="1dp" android:color="#919191"/>
+                    <size android:width="24dp" android:height="24dp"/>
+                    <solid android:color="@color/transparent"/>
+                </shape>
+            </item>
+            <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+                <shape android:shape="oval">
+                    <solid android:width="1dp" android:color="@color/light_gray"/>
+                    <size android:width="1dp" android:height="1dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <stroke android:width="1dp" android:color="@color/main_color"/>
+                    <size android:width="24dp" android:height="24dp"/>
+                    <solid android:color="@color/main_color"/>
+                </shape>
+            </item>
+            <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+                <shape android:shape="oval">
+                    <solid android:width="1dp" android:color="@color/white"/>
+                    <size android:width="1dp" android:height="1dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

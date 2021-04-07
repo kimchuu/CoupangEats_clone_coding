@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".src.main.address.SetAddressActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/set_address_search_btn_back_in_toolbar"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_left"
+                android:background="@color/white"
+
+                />
+
+            <TextView
+                android:id="@+id/set_address_search_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배달지 주소 설정"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:fontFamily="@font/neo_sans_pro"
+                android:textStyle="bold"
+                android:paddingLeft="22dp"
+                />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/set_address_search_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_baseline_search_24" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/set_address_search_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/search_address"
+            android:textSize="15sp"
+            android:textCursorDrawable="@drawable/cursor_with_padding_main"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginVertical="4dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색 Tip"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* 도로명 + 건물번호"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  (예: 송파대로 570)"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* 동/읍/면/리 + 번지"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  (예: 신천동 7-30)"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* 건물명, 아파트명"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  (예: 반포자이아파트)"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

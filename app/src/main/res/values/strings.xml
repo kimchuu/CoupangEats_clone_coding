@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">CoupangEats_clone</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    //activity_select_login
+    <string name="need_login">로그인이 필요합니다.</string>
+    <string name="login_to_google">쿠팡앱으로 로그인</string>
+    <string name="login_with_coupang_eats">쿠팡 아이디로 로그인</string>
+    <string name="membership">회원가입</string>
+    <string name="clause">로그인하여 <u>쿠팡이츠 서비스 이용약관</u>, <u>위치기반서비스 이용약관</u>, <u>쿠팡페이 서비스 이용약관</u>, <u>쿠팡페이 전자금융거래약관</u>, <u>쿠팡페이 개인정보수집이용</u>, <u>쿠팡페이 개인 정보제공</u>에 동의합니다.</string>
+
+
+    //activity_set_address
+    <string name="set_delivery_address">배달지 주소 설정</string>
+    <string name="search_address">도로명, 건물명 또는 지번으로 검색</string>
+    <string name="search_current_position_address">현재 위치로 주소 찾기</string>
+
+
+</resources>

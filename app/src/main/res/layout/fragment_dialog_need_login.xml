@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="12dp">
+
+    <TextView
+        android:id="@+id/fr_dialog_need_login_tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/need_login"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fr_dialog_need_login_tv_login_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="로그인 후 맛있는 음식을 빠르게 즐겨보세요."
+        android:textColor="@color/text_gray"
+        android:textSize="16sp"
+        android:fontFamily="@font/neo_sans_pro"
+
+        app:layout_constraintBottom_toTopOf="@id/fr_dialog_need_login_btn_login_to_google"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="52dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fr_dialog_need_login_btn_login_to_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/main_color"
+        android:padding="6dp"
+        android:text="@string/login_to_google"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintBottom_toTopOf="@id/fr_dialog_need_login_btn_login_with_coupang_eats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_dialog_need_login_tv_login_detail"
+        android:stateListAnimator="@null"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fr_dialog_need_login_btn_login_with_coupang_eats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:padding="6dp"
+        android:text="@string/login_with_coupang_eats"
+        android:textColor="@color/main_color"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/fr_dialog_need_login_ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_dialog_need_login_btn_login_to_google"
+        app:strokeColor="@color/main_color"
+        app:strokeWidth="1dp"
+        android:stateListAnimator="@null"/>
+
+    <LinearLayout
+        android:id="@+id/fr_dialog_need_login_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toTopOf="@id/fr_dialog_need_login_tv_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_dialog_need_login_btn_login_with_coupang_eats"
+        android:clickable="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아직 회원이 아니신가요? "
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/fr_dialog_need_login_btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="@string/membership"
+            android:textColor="@color/main_text_color"
+            android:textSize="13sp"
+            android:fontFamily="@font/noto_sans_kr_bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fr_dialog_need_login_tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:breakStrategy="high_quality"
+        android:gravity="center"
+
+        android:paddingHorizontal="20dp"
+        android:text="@string/clause"
+        android:textSize="10sp"
+        android:textColor="@color/text_gray"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fr_dialog_need_login_ll"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

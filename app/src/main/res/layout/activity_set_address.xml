@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".src.main.address.SetAddressActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/set_address_btn_cancel_in_toolbar"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_iconfinder_cross_24"
+                android:background="@color/white"
+
+                />
+
+            <TextView
+                android:id="@+id/set_address_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="배달지 주소 설정"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:fontFamily="@font/neo_sans_pro"
+                android:textStyle="bold"
+                android:paddingLeft="22dp"
+                />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/set_address_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:clickable="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_baseline_search_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/search_address"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginVertical="4dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/btn_rectangle_dark_gray"
+        android:padding="8dp"
+        android:layout_marginVertical="12dp"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_circle_location"
+            android:layout_marginRight="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현재 위치로 주소 찾기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:paddingHorizontal="4dp"
+            />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/set_address_btn_home"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="16dp"
+        android:clickable="true"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/set_address_img_home"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_home_ppt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingRight="12dp"
+            />
+
+        <TextView
+            android:id="@+id/set_address_tv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="집"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/set_address_img_home"
+            android:visibility="visible"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서울특별시 양천구 중앙로 29길"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp"
+
+            app:layout_constraintTop_toTopOf="@id/set_address_tv_home"
+
+            app:layout_constraintStart_toEndOf="@id/set_address_img_home"
+            android:layout_marginTop="24dp"
+            android:visibility="visible"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/set_address_img_check_home"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_check"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/set_address_img_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/set_address_btn_company"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="16dp"
+        android:clickable="true"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/set_address_img_company"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_briefcase"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingRight="12dp"
+            />
+
+        <TextView
+            android:id="@+id/set_address_tv_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회사"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/set_address_img_company"
+            android:visibility="visible"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서울특별시 동작구 상도로 369"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp"
+
+            app:layout_constraintTop_toTopOf="@id/set_address_tv_company"
+
+            app:layout_constraintStart_toEndOf="@id/set_address_img_company"
+            android:layout_marginTop="24dp"
+            android:visibility="visible"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/set_address_img_check_company"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_check"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/set_address_img_company"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/set_address_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        />
+
+
+
+</LinearLayout>

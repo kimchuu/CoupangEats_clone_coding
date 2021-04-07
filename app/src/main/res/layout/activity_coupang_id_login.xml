@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".src.login.CoupangIdLoginActivity"
+    android:paddingHorizontal="24dp"
+   >
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/coupang_id_login_btn_cancel_screen"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_iconfinder_cross_bold"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/coupang_logo"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/coupand_id_login_ll_email"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+
+        android:background="@drawable/btn_login"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:text="이메일"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            />
+
+            <EditText
+                android:id="@+id/coupand_id_login_et_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="쿠팡 아이디(이메일) 입력"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:paddingStart="4dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:textCursorDrawable="@drawable/cursor_with_padding_main"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/coupand_id_login_btn_cancel_email"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_closed_circle"
+            android:background="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:visibility="invisible"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/coupand_id_login_ll_pw"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@drawable/btn_login"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp"
+        >
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:text="비밀번호"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/noto_sans_kr_regular"
+
+            />
+
+            <EditText
+                android:id="@+id/coupand_id_login_et_pw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="비밀번호 입력"
+                android:inputType="textPassword"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:paddingStart="4dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:textCursorDrawable="@drawable/cursor_with_padding_main"
+
+                />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/coupand_id_login_btn_pw"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/show_password_selector"
+            android:background="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:clickable="true"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/coupang_id_login_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/main_color"
+        android:text="로그인"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:textColor="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디 찾기"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="11sp"
+            android:background="@color/light_gray"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="11sp"
+            android:background="@color/light_gray"
+
+            />
+
+        <TextView
+            android:id="@+id/coupang_id_login_move_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/membership"
+            android:textColor="@color/main_color"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            />
+    </LinearLayout>
+
+</LinearLayout>

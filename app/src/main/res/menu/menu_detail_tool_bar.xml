@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<item android:id="@+id/share"
+    android:icon="@drawable/ic_share"
+    android:iconTint="@color/white"
+    android:title="공유"
+    android:contentDescription="공유"
+    app:showAsAction="always" />
+
+    <item android:id="@+id/like"
+        android:icon="@drawable/ic_iconfinder_heart"
+        android:iconTint="@color/white"
+        android:title="좋아요"
+        android:contentDescription="좋아요"
+        app:showAsAction="always" />
+
+</menu>

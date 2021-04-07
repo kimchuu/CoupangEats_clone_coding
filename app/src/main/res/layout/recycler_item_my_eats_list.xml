@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="14dp"
+
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rv_item_my_eats_image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_my_eats_list" />
+
+    <TextView
+        android:id="@+id/rv_item_my_eats_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/neo_sans_pro"
+        android:text="배달 주소 관리"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rv_item_my_eats_img_new"
+        android:layout_width="66dp"
+        android:layout_height="56dp"
+        android:layout_gravity="top"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/my_eats_new" />
+
+</LinearLayout>

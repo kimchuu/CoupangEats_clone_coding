@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        android:layout_marginHorizontal="12dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ry_item_store_img_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginRight="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/store_image_1"
+            app:layout_constraintEnd_toStartOf="@+id/ry_item_store_img_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintWidth_percent="0.75" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ry_item_store_img_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="6dp"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/store_image_2"
+            app:layout_constraintBottom_toTopOf="@+id/ry_item_store_img_3"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ry_item_store_img_1"
+
+            app:layout_constraintWidth_percent="0.25"
+            android:layout_marginLeft="1dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ry_item_store_img_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="6dp"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/store_image_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ry_item_store_img_1"
+
+            app:layout_constraintWidth_percent="0.25" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="12dp"
+        >
+        <TextView
+            android:id="@+id/ry_item_store_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="진참치"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+           />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ry_item_store_img_chita"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:src="@drawable/chita"
+
+            app:layout_constraintStart_toEndOf="@id/ry_item_store_title"
+            app:layout_constraintTop_toTopOf="@id/ry_item_store_title"
+            app:layout_constraintBottom_toBottomOf="@id/ry_item_store_title"
+
+            android:layout_marginStart="8dp"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/ry_item_store_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ry_item_store_title"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ry_item_store_info_star_img"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_gravity="center"
+                android:paddingRight="2dp"
+                />
+            <TextView
+                android:id="@+id/ry_item_store_info_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.7"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+
+                app:layout_constraintStart_toEndOf="@id/ry_item_store_info_star_img"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="2dp"
+                />
+            <TextView
+                android:id="@+id/ry_item_store_info_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(323)"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+
+                app:layout_constraintStart_toEndOf="@id/ry_item_store_info_star"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/ry_item_store_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" · "
+                android:textColor="@color/black"
+                android:textSize="13sp"
+
+                app:layout_constraintStart_toEndOf="@id/ry_item_store_info_review"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/ry_item_store_info_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.0km"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+
+                app:layout_constraintStart_toEndOf="@id/ry_item_store_dot"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/ry_item_store_dot_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" · "
+                android:textColor="@color/black"
+                android:textSize="13sp"
+
+                app:layout_constraintStart_toEndOf="@id/ry_item_store_info_review"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/ry_item_store_info_delivery_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="무료배달"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+
+                app:layout_constraintStart_toEndOf="@id/ry_item_store_dot_second"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ry_item_store_info_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20-30분"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

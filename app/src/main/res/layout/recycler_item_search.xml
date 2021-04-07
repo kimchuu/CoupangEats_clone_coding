@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ry_item_search_image"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:src="@drawable/category_new"
+        />
+    <TextView
+        android:id="@+id/ry_item_search_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신규 맛집"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/neo_sans_pro"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>

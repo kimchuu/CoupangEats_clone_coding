@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.register.RegisterActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_iconfinder_cross_24"
+
+            app:navigationIconTint="@color/black"
+            app:title="@string/membership"
+            app:titleTextColor="@color/black" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:paddingHorizontal="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/register_coupang_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/coupang_logo"
+
+                android:layout_marginVertical="8dp"
+
+
+                app:layout_constraintBottom_toTopOf="@id/register_tv_register_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/register_tv_register_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="회원정보를 입력해주세요"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@id/register_ll_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_coupang_logo"
+                android:paddingBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/register_ll_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_tv_register_detail"
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/register_rl_edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_rectangle"
+                    android:layout_marginVertical="4dp"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/register_img_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_email"
+                        android:scaleType="center"
+                        android:background="@drawable/image_border"
+                        android:layout_margin="2dp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/register_tf_email"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp"
+
+                        android:layout_gravity="center_vertical"
+                        android:layout_toEndOf="@+id/register_img_email"
+                        android:gravity="center_vertical"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            android:id="@+id/register_et_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@id/register_img_email"
+                            android:background="@null"
+                            android:hint="아이디(이메일)"
+                            android:inputType="textEmailAddress"
+                            android:paddingStart="8dp"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_margin="1dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/register_check_email"
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/ic_baseline_check"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/register_helper_text_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이메일을 올바르게 입력해주세요."
+                    android:textColor="@color/error_red"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/register_rl_edit_email"
+                    android:layout_marginStart="13dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/register_ll_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_ll_email"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/register_rl_edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@drawable/btn_rectangle"
+                    android:orientation="horizontal"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/register_rl_edit_email"
+                    android:layout_marginVertical="4dp"
+                    >
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/register_img_pw"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/white_gray"
+                        android:background="@drawable/btn_rectangle"
+                        android:padding="9dp"
+                        android:src="@drawable/ic_iconfinder_lock" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/register_tf_pw"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp"
+
+                        android:layout_gravity="center_vertical"
+                        android:layout_toEndOf="@+id/register_img_pw"
+                        android:gravity="center_vertical"
+                        app:endIconMode="password_toggle"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            android:id="@+id/register_et_pw"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="비밀번호"
+                            android:inputType="textPassword"
+                            android:textSize="11sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/register_check_pw"
+                        android:layout_width="24dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_baseline_check"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/register_tv_precaution_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ⓘ 6자 이상의 영문/숫자/특수문자 2가지 이상의 조합이어야 합니다."
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+
+
+                    app:layout_constraintBottom_toTopOf="@id/register_rl_edit_user_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/register_rl_edit_password"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/register_helper_text_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호는 6~15자 이내로 입력하셔야 합니다"
+                android:textColor="@color/error_red"
+                android:textSize="11sp"
+                android:visibility="gone"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/register_ll_password"
+                android:layout_marginStart="13dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/register_ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_ll_password"
+                android:layout_marginBottom="8dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/register_rl_edit_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@drawable/btn_radius"
+                    android:orientation="horizontal"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/register_helper_text_password"
+                    android:layout_marginVertical="4dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/register_img_name"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/light_gray"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_iconfinder_user_membership" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/register_tf_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_gravity="center_vertical"
+                        android:layout_toEndOf="@+id/register_img_name"
+                        android:gravity="center_vertical"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            android:id="@+id/register_et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="이름"
+                            android:inputType="textPersonName"
+                            android:textSize="11sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/register_check_name"
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/ic_baseline_check"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/register_helper_text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이름을 정확히 입력하세요."
+                    android:textColor="@color/error_red"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    android:layout_marginStart="13dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/register_ll_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_ll_name"
+                android:layout_marginBottom="8dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/register_rl_edit_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@drawable/btn_radius"
+                    android:orientation="horizontal"
+
+                    app:layout_constraintBottom_toTopOf="@id/register_line_clause"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginVertical="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/register_img_phone_number"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/light_gray"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_iconfinder_ic_phone" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/register_tf_phone_number"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_gravity="center_vertical"
+                        android:layout_toEndOf="@+id/register_img_phone_number"
+                        android:gravity="center_vertical"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            android:id="@+id/register_et_phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="휴대폰 번호"
+                            android:inputType="phone"
+                            android:textSize="11sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/register_check_phone_number"
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/ic_baseline_check"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/register_helper_text_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휴대폰 번호를 올바르게 입력해주세요."
+                    android:textColor="@color/error_red"
+                    android:textSize="11sp"
+                    android:visibility="gone"
+                    android:layout_marginStart="13dp"
+                    />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/register_line_clause"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/light_gray"
+
+                app:layout_constraintBottom_toTopOf="@id/register_tv_agree_clause"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_ll_phone_number"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:id="@+id/register_tv_agree_clause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="쿠팡 서비스약관에 동의해주세요"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_line_clause" />
+
+            <LinearLayout
+                android:id="@+id/register_ll_all_agree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_tv_agree_clause">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/register_checkbox_all_agree"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="모두 동의합니다."
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/register_ll_agree_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_radius"
+                android:orientation="vertical"
+                android:padding="12dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_ll_all_agree">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/register_checkbox_agree1"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[필수] 만 14세 이상입니다"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/register_checkbox_agree2"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="[필수] 쿠팡 이용약관 동의"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_iconfinder_arrow" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/register_checkbox_agree3"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="[필수] 전자금융거래 이용약관 동의"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_iconfinder_arrow" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/register_checkbox_agree4"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="[필수] 개인정보 수집 및 이용 동의"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_iconfinder_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/register_checkbox_agree5"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="[필수] 개인정보 제공 동의"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_iconfinder_arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register_btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:backgroundTint="@color/main_color"
+                android:padding="16dp"
+                android:text="동의하고 가입하기"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_ll_agree_items" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"
+                android:text="©Mindori Coupang Eats omnyamnyam"
+                android:textSize="8sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_btn_register" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

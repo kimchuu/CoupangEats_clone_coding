@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/search_topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/search_top_tool_bar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="8dp"
+            app:menu="@menu/menu_home_tool_bar">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/search_btn_back_in_toolbar"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:background="@color/white"
+                android:paddingStart="8dp"
+                android:src="@drawable/ic_arrow_left"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/search_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_radius"
+                android:backgroundTint="#f3f3f5"
+                android:hint="검색어를 입력하세요."
+                android:paddingHorizontal="12dp"
+                android:textCursorDrawable="@drawable/cursor_with_padding_main"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Note: A RecyclerView can also be used -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_topAppBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="12dp"
+            android:paddingBottom="?attr/actionBarSize">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_recyclerView_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:visibility="visible"
+                />
+
+            <LinearLayout
+                android:id="@+id/search_ll_popular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/search_recyclerView_category"
+                android:layout_alignParentTop="true"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="인기 검색어"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/search_popular" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

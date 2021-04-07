@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.coupangeats_clone">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".config.ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="쿠팡이츠_clone"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CoupangEats_clone"
+        tools:replace="android:label">
+        <activity android:name=".src.main.SecondActivity"></activity>
+        <activity android:name=".src.main.detail.product.ProductActivity" />
+        <activity android:name=".src.main.search.SearchKeywordActivity" />
+        <activity android:name=".src.main.address.SetAdressDetailActivity" />
+        <activity android:name=".src.main.detail.DetailStoreActivity" />
+        <activity android:name=".src.main.favorite.FavoriteActivity" />
+        <activity android:name=".src.main.address.SetAddressActivity" />
+        <activity android:name=".src.main.address.SetAddressSearchActivity" />
+        <activity android:name=".src.register.RegisterActivity" />
+        <activity
+            android:name=".src.login.CoupangIdLoginActivity"
+
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".src.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".src.main.MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+    </application>
+
+</manifest>
